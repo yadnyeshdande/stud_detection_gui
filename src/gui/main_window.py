@@ -30,7 +30,7 @@ class CameraPreview(QThread):
                 current_time = time.time()
 
                 # Perform detection only once every minute
-                if current_time - self.last_detection_time >=60: # 60 seconds interval
+                if current_time - self.last_detection_time >=5: # 60 seconds interval
                     self.last_detection_time = current_time
                     self.last_detected_frame = self.perform_detection(frame)  # Run the detection logic
 
